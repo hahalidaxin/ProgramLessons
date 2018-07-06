@@ -1,59 +1,51 @@
-from collections import defaultdict
+# -*- coding: utf-8 -*-
+'''Step one:New Dictionary'''
+dict1 = {}
+for i in range(100):
+    sentence = raw_input()
+    word_list = sentence.split()
+    for word in word_list:
+        if word not in dict1:
+            dict1[word] = set()
+        dict1[word].add(i+1)
 
-class INVERTED_INDEXOR:
-    def __init__(self):
-        self.dict = defaultdict(list)
+'''Step two:Print Index'''
+answer_list = sorted(dict1.iteritems(),key=lambda d:d[0])
+for word in answer_list:
+    l = list(word[1])
+    l.sort()
+    print word[0]+': '+', '.join(map(str,l))
 
-    def buildIndex(self):
-        dict = self.dict
-        for i in range(1, 101):
-            strs = raw_input().strip().split(" ")
-            for str in strs:
-                if not dict[str].count(i):
-                    dict[str].append(i)
+def print_answer(answer_set):
+    empty_set = set()                                   
+    if empty_set == answer_set:
+        print 'None'
+    else:
+        answer_list=list(answer_set)
+        answer_list.sort()
+        print ', '.join(map(str,answer_list))
 
-    def printIndex(self):
-        dict = self.dict
-        keys = sorted(dict.keys())
-        for s in keys:
-            print str(s) + ": " + ", ".join(map(str, dict[s]))
-
-    def queryIndex(self, line, type):
-        dict = self.dict
-        ans = set()
-        flag = 0
-        for s in line.strip().split(" "):
-            if (flag==0):
-                ans = set(dict[s])
-                flag = 1
-            else:
-                if (not type):
-                    ans = ans & set(dict[s])
-                else:
-                    ans = ans | set(dict[s])
-        if len(ans) == 0:
-            print None
-        else:
-            ls = sorted(list(ans))
-            print ", ".join(map(str, ls))
-
-    def runQuery(self):
-        while (True):
-            line = raw_input()
-            if len(line) == 0:
-                break
-            else:
-                type = 0
-                if  line.startswith("AND: "):
-                    line = line.strip()[5:]
-                elif line.startswith("OR: "):
-                    line = line.strip()[4:]
-                    type = 1
-                self.queryIndex(line, type)
-
-
-if __name__ == "__main__":
-    indexor = INVERTED_INDEXOR()
-    indexor.buildIndex()
-    indexor.printIndex()
-    indexor.runQuery()
+'''Step three:Retrieval'''       
+while True:
+    Query = raw_input() 
+    if Query == '': break
+    answer_set = set()         
+    if 'OR:' in Query:
+        Query = Query[3:]
+        Q_word_list = Query.split()
+        for word in Q_word_list:
+            if (word != '')and(word in dict1):
+                answer_set = dict1[word]|answer_set
+        print_answer(answer_set)
+    else:
+        if 'AND:' in Query:Query = Query[4:]
+        Q_word_list = Query.split()
+        if Q_word_list!=[]:
+            for i in range(1,101):answer_set.add(i)          
+            for word in Q_word_list:
+                if (word != ''):
+                    if word in dict1:
+                        answer_set = dict1[word]&answer_set
+                    else:answer_set = set()
+            print_answer(answer_set)                         
+        else:print 'None'
