@@ -1,4 +1,5 @@
 import nation
+import pickle
 from collections import defaultdict
 
 def decode(s):
@@ -6,22 +7,24 @@ def decode(s):
 
 nations = {}
 nations_bycontinent = defaultdict(list)
+
+
 def readData():
-    f = open("nationsDict.dat","r")
-    while(True) :
-        line = f.readline()
-        if(len(line)==0): break
-        strs = decode(line).strip().split(",")
-        nations[strs[0]] = nation.Nation(strs[0],strs[1],strs[2],strs[3])
-        nations_bycontinent[strs[1]].append(strs[0])
+    global nations
+    nations = pickle.load(open("nationsDict.dat",'rb'))
+    for name in nations:
+        nations_bycontinent[nations[name].continent].append(name)
+
+
 def query():
     while(True):
-        continent = input("Enter a continent: ")
+        continent = raw_input("Enter a continent: ")
         ls = nations_bycontinent[continent]
-        print(ls)
         ls = sorted(ls,key=lambda x: -float(nations[x].population)/float(nations[x].area))
         for i in range(min(len(ls),5)):
-            print(" ",ls[i])
+            print " ",ls[i]
+
+
 if __name__=="__main__":
     readData()
     query()
