@@ -1,4 +1,4 @@
-from tkinter import *
+from Tkinter import *
 import random
 
 
@@ -11,7 +11,7 @@ class SnakeGame:
         # game score
         self.gamescore=-10
         # score per food
-        self.scoreperfood = 2
+        self.scoreperfood = 10
         
         # to initialize the snake in the range of (x1,y1,x2,y1)
         r = random.randrange(191, 191 + 15 * 10, self.step)
@@ -29,7 +29,7 @@ class SnakeGame:
         window.title("Snake game")
         self.frame1=Frame(window,height=400,width=600)
         self.frame2=Frame(self.frame1)
-        self.canvas=Canvas(self.frame1,width=600,height=400)
+        self.canvas=Canvas(self.frame1,width=600,height=400,bg="yellow")
         self.score_label=Label(self.frame2)
 
         self.frame1.pack(fill=BOTH)
@@ -84,7 +84,7 @@ class SnakeGame:
         
     #score model    
     def score(self):
-        self.gamescore = len(self.snakeX)-3*self.scoreperfood
+        self.gamescore = (len(self.snakeX)-3)*self.scoreperfood
         
     
     "=== Control Part ==="     

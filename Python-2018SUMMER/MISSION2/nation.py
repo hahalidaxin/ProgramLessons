@@ -6,3 +6,6 @@ class Nation:
         self.continent = continent
         self.population = population
         self.area = area
+
+    def popDensity(self):
+        return float(self.population)/float(self.area)
