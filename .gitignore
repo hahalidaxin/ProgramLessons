@@ -119,3 +119,11 @@ test.py
 #OurAlgorithm 
 CommunitySearch.py
 
+
+*.doc
+*.docx
+*.txt
+*.exe
+*.rar
+*.zip
+*.7z
