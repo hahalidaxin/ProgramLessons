@@ -9,8 +9,8 @@ Contents of section .note.ABI-tag:
  0178 00000000 03000000 02000000 00000000  ................
 Contents of section .note.gnu.build-id:
  0188 04000000 14000000 03000000 474e5500  ............GNU.
- 0198 46809b5a 9aab020f 41178fc8 e21672f0  F..Z....A.....r.
- 01a8 9e9d0c44                             ...D            
+ 0198 b2fe671e 52d9b1a9 82b86700 2324bffe  ..g.R.....g.#$..
+ 01a8 31cba861                             1..a            
 Contents of section .gnu.hash:
  01ac 02000000 07000000 01000000 05000000  ................
  01bc 00200020 00000000 07000000 ad4be3c0  . . .........K..
@@ -89,19 +89,19 @@ Contents of section .text:
  05a0 03948ae8 e7ffffff e28b4424 04f7d0c3  ..........D$....
  05b0 83e0038b 54240489 c1d3fa89 d0c3f7d0  ....T$..........
  05c0 23442404 c3c1e008 0b442404 c3334424  #D$......D$..3D$
- 05d0 04c38b44 2404f7d8 f3c35653 e8fcffff  ...D$.....VS....
- 05e0 ff81c6f7 1900008b 44240c88 86300000  ........D$...0..
- 05f0 00bb0000 0000eb1a 530fbe86 00000000  ........S.......
- 0600 50e8fcff ffff83c4 08888630 00000083  P..........0....
- 0610 c30183fb 0d76e15b 5ec35557 5653e8fc  .....v.[^.UWVS..
- 0620 ffffff81 c3b51900 008b7424 14b9ffff  ..........t$....
+ 05d0 04c38b44 2404f7d8 f3c35653 e8d10000  ...D$.....VS....
+ 05e0 0081c6f7 1900008b 44240c88 86300000  ........D$...0..
+ 05f0 00bb0000 0000eb1a 530fbe86 30000000  ........S...0...
+ 0600 50e87fff ffff83c4 08888630 00000083  P..........0....
+ 0610 c30183fb 0d76e15b 5ec35557 5653e80d  .....v.[^.UWVS..
+ 0620 feffff81 c3b51900 008b7424 14b9ffff  ..........t$....
  0630 ffffb800 00000089 f7f2ae89 c8f7d083  ................
  0640 e80189c5 b9000000 00eb0383 c10139e9  ..............9.
- 0650 7d268d3c 0e0fbe17 0fb69413 00000000  }&.<............
+ 0650 7d268d3c 0e0fbe17 0fb69413 08e8ffff  }&.<............
  0660 32933000 000083e2 7f881783 ea2080fa  2.0.......... ..
  0670 5e76d8c6 0720ebd3 5b5e5f5d c3565383  ^v... ..[^_].VS.
- 0680 ec04e8fc ffffff81 c3020000 0068c000  .............h..
- 0690 0000e8fc ffffff8d b3340000 0056e877  .........4...V.w
+ 0680 ec04e8a9 fdffff81 c3511900 0068c000  .........Q...h..
+ 0690 0000e843 ffffff8d b3340000 0056e877  ...C.....4...V.w
  06a0 ffffff83 ec0456e8 14fdffff 83c4145b  ......V........[
  06b0 5ec38b34 24c36690 66906690 66906690  ^..4$.f.f.f.f.f.
  06c0 55575653 e867fdff ff81c30f 19000083  UWVS.g..........
@@ -123,7 +123,7 @@ Contents of section .rodata:
  0790 76616e74 206f626a 65637420 6d6f6475  vant object modu
  07a0 6c652873 29207769 74682074 6865206d  le(s) with the m
  07b0 61696e20 6d6f6475 6c652e00 00000000  ain module......
- 07c0 00000000 d8e5ffff fae5ffff e6e5ffff  ................
+ 07c0 d1e5ffff d8e5ffff fae5ffff e6e5ffff  ................
  07d0 ede5ffff f5e5ffff fae5ffff 00e6ffff  ................
  07e0 00010203 04050607 08090a0b 0c0d0e0f  ................
  07f0 10111213 14151617 18191a1b 1c1d1e1f  ................
@@ -461,16 +461,16 @@ Disassembly of section .text:
 000005da <generate_code>:
  5da:	56                   	push   %esi
  5db:	53                   	push   %ebx
- 5dc:	e8 fc ff ff ff       	call   5dd <generate_code+0x3>
+ 5dc:	e8 d1 00 00 00       	call   6b2 <__x86.get_pc_thunk.si>
  5e1:	81 c6 f7 19 00 00    	add    $0x19f7,%esi
  5e7:	8b 44 24 0c          	mov    0xc(%esp),%eax
  5eb:	88 86 30 00 00 00    	mov    %al,0x30(%esi)
  5f1:	bb 00 00 00 00       	mov    $0x0,%ebx
  5f6:	eb 1a                	jmp    612 <generate_code+0x38>
  5f8:	53                   	push   %ebx
- 5f9:	0f be 86 00 00 00 00 	movsbl 0x0(%esi),%eax
+ 5f9:	0f be 86 30 00 00 00 	movsbl 0x30(%esi),%eax
  600:	50                   	push   %eax
- 601:	e8 fc ff ff ff       	call   602 <generate_code+0x28>
+ 601:	e8 7f ff ff ff       	call   585 <transform_code>
  606:	83 c4 08             	add    $0x8,%esp
  609:	88 86 30 00 00 00    	mov    %al,0x30(%esi)
  60f:	83 c3 01             	add    $0x1,%ebx
@@ -485,7 +485,7 @@ Disassembly of section .text:
  61b:	57                   	push   %edi
  61c:	56                   	push   %esi
  61d:	53                   	push   %ebx
- 61e:	e8 fc ff ff ff       	call   61f <encode+0x5>
+ 61e:	e8 0d fe ff ff       	call   430 <__x86.get_pc_thunk.bx>
  623:	81 c3 b5 19 00 00    	add    $0x19b5,%ebx
  629:	8b 74 24 14          	mov    0x14(%esp),%esi
  62d:	b9 ff ff ff ff       	mov    $0xffffffff,%ecx
@@ -503,8 +503,8 @@ Disassembly of section .text:
  650:	7d 26                	jge    678 <encode+0x5e>
  652:	8d 3c 0e             	lea    (%esi,%ecx,1),%edi
  655:	0f be 17             	movsbl (%edi),%edx
- 658:	0f b6 94 13 00 00 00 	movzbl 0x0(%ebx,%edx,1),%edx
- 65f:	00 
+ 658:	0f b6 94 13 08 e8 ff 	movzbl -0x17f8(%ebx,%edx,1),%edx
+ 65f:	ff 
  660:	32 93 30 00 00 00    	xor    0x30(%ebx),%dl
  666:	83 e2 7f             	and    $0x7f,%edx
  669:	88 17                	mov    %dl,(%edi)
@@ -523,10 +523,10 @@ Disassembly of section .text:
  67d:	56                   	push   %esi
  67e:	53                   	push   %ebx
  67f:	83 ec 04             	sub    $0x4,%esp
- 682:	e8 fc ff ff ff       	call   683 <do_phase+0x6>
- 687:	81 c3 02 00 00 00    	add    $0x2,%ebx
+ 682:	e8 a9 fd ff ff       	call   430 <__x86.get_pc_thunk.bx>
+ 687:	81 c3 51 19 00 00    	add    $0x1951,%ebx
  68d:	68 c0 00 00 00       	push   $0xc0
- 692:	e8 fc ff ff ff       	call   693 <do_phase+0x16>
+ 692:	e8 43 ff ff ff       	call   5da <generate_code>
  697:	8d b3 34 00 00 00    	lea    0x34(%ebx),%esi
  69d:	56                   	push   %esi
  69e:	e8 77 ff ff ff       	call   61a <encode>
