@@ -1,0 +1,13 @@
+
+getcode.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	2d e3 19 00 00       	sub    $0x19e3,%eax
+   5:	8d 80 23 01 00 00    	lea    0x123(%eax),%eax
+   b:	50                   	push   %eax
+   c:	e8 a1 ff ff ff       	call   0xffffffa1
+  11:	58                   	pop    %eax
+  12:	05 23 01 00 00       	add    $0x123,%eax

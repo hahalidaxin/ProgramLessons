@@ -1,0 +1,40 @@
+
+main.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+   4:	83 e4 f0             	and    $0xfffffff0,%esp
+   7:	ff 71 fc             	pushl  -0x4(%ecx)
+   a:	55                   	push   %ebp
+   b:	89 e5                	mov    %esp,%ebp
+   d:	53                   	push   %ebx
+   e:	51                   	push   %ecx
+   f:	e8 fc ff ff ff       	call   10 <main+0x10>
+  14:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  1a:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+  20:	8b 00                	mov    (%eax),%eax
+  22:	85 c0                	test   %eax,%eax
+  24:	74 11                	je     37 <main+0x37>
+  26:	ff d0                	call   *%eax
+  28:	b8 00 00 00 00       	mov    $0x0,%eax
+  2d:	8d 65 f8             	lea    -0x8(%ebp),%esp
+  30:	59                   	pop    %ecx
+  31:	5b                   	pop    %ebx
+  32:	5d                   	pop    %ebp
+  33:	8d 61 fc             	lea    -0x4(%ecx),%esp
+  36:	c3                   	ret    
+  37:	83 ec 0c             	sub    $0xc,%esp
+  3a:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+  40:	50                   	push   %eax
+  41:	e8 fc ff ff ff       	call   42 <main+0x42>
+  46:	83 c4 10             	add    $0x10,%esp
+  49:	eb dd                	jmp    28 <main+0x28>
+
+Disassembly of section .text.__x86.get_pc_thunk.bx:
+
+00000000 <__x86.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    

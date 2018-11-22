@@ -1,0 +1,166 @@
+
+phase4.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <do_phase>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	53                   	push   %ebx
+   4:	83 ec 24             	sub    $0x24,%esp
+   7:	e8 fc ff ff ff       	call   8 <do_phase+0x8>
+   c:	81 c3 02 00 00 00    	add    $0x2,%ebx
+  12:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+  18:	89 45 f4             	mov    %eax,-0xc(%ebp)
+  1b:	31 c0                	xor    %eax,%eax
+  1d:	c7 45 e9 58 4b 55 4a 	movl   $0x4a554b58,-0x17(%ebp)
+  24:	c7 45 ed 59 54 46 57 	movl   $0x57465459,-0x13(%ebp)
+  2b:	66 c7 45 f1 4d 48    	movw   $0x484d,-0xf(%ebp)
+  31:	c6 45 f3 00          	movb   $0x0,-0xd(%ebp)
+  35:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%ebp)
+  3c:	e9 e7 00 00 00       	jmp    128 <.L30+0x19>
+  41:	8d 55 e9             	lea    -0x17(%ebp),%edx
+  44:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+  47:	01 d0                	add    %edx,%eax
+  49:	0f b6 00             	movzbl (%eax),%eax
+  4c:	88 45 e3             	mov    %al,-0x1d(%ebp)
+  4f:	0f be 45 e3          	movsbl -0x1d(%ebp),%eax
+  53:	83 e8 41             	sub    $0x41,%eax
+  56:	83 f8 19             	cmp    $0x19,%eax
+  59:	0f 87 b5 00 00 00    	ja     114 <.L30+0x5>
+  5f:	c1 e0 02             	shl    $0x2,%eax
+  62:	8b 84 18 00 00 00 00 	mov    0x0(%eax,%ebx,1),%eax
+  69:	01 d8                	add    %ebx,%eax
+  6b:	ff e0                	jmp    *%eax
+
+0000006d <.L4>:
+  6d:	c6 45 e3 35          	movb   $0x35,-0x1d(%ebp)
+  71:	e9 9e 00 00 00       	jmp    114 <.L30+0x5>
+
+00000076 <.L6>:
+  76:	c6 45 e3 30          	movb   $0x30,-0x1d(%ebp)
+  7a:	e9 95 00 00 00       	jmp    114 <.L30+0x5>
+
+0000007f <.L7>:
+  7f:	c6 45 e3 49          	movb   $0x49,-0x1d(%ebp)
+  83:	e9 8c 00 00 00       	jmp    114 <.L30+0x5>
+
+00000088 <.L8>:
+  88:	c6 45 e3 4d          	movb   $0x4d,-0x1d(%ebp)
+  8c:	e9 83 00 00 00       	jmp    114 <.L30+0x5>
+
+00000091 <.L9>:
+  91:	c6 45 e3 38          	movb   $0x38,-0x1d(%ebp)
+  95:	eb 7d                	jmp    114 <.L30+0x5>
+
+00000097 <.L10>:
+  97:	c6 45 e3 32          	movb   $0x32,-0x1d(%ebp)
+  9b:	eb 77                	jmp    114 <.L30+0x5>
+
+0000009d <.L11>:
+  9d:	c6 45 e3 36          	movb   $0x36,-0x1d(%ebp)
+  a1:	eb 71                	jmp    114 <.L30+0x5>
+
+000000a3 <.L12>:
+  a3:	c6 45 e3 4b          	movb   $0x4b,-0x1d(%ebp)
+  a7:	eb 6b                	jmp    114 <.L30+0x5>
+
+000000a9 <.L13>:
+  a9:	c6 45 e3 46          	movb   $0x46,-0x1d(%ebp)
+  ad:	eb 65                	jmp    114 <.L30+0x5>
+
+000000af <.L14>:
+  af:	c6 45 e3 3e          	movb   $0x3e,-0x1d(%ebp)
+  b3:	eb 5f                	jmp    114 <.L30+0x5>
+
+000000b5 <.L15>:
+  b5:	c6 45 e3 31          	movb   $0x31,-0x1d(%ebp)
+  b9:	eb 59                	jmp    114 <.L30+0x5>
+
+000000bb <.L16>:
+  bb:	c6 45 e3 6e          	movb   $0x6e,-0x1d(%ebp)
+  bf:	eb 53                	jmp    114 <.L30+0x5>
+
+000000c1 <.L17>:
+  c1:	c6 45 e3 4a          	movb   $0x4a,-0x1d(%ebp)
+  c5:	eb 4d                	jmp    114 <.L30+0x5>
+
+000000c7 <.L18>:
+  c7:	c6 45 e3 6c          	movb   $0x6c,-0x1d(%ebp)
+  cb:	eb 47                	jmp    114 <.L30+0x5>
+
+000000cd <.L19>:
+  cd:	c6 45 e3 67          	movb   $0x67,-0x1d(%ebp)
+  d1:	eb 41                	jmp    114 <.L30+0x5>
+
+000000d3 <.L20>:
+  d3:	c6 45 e3 34          	movb   $0x34,-0x1d(%ebp)
+  d7:	eb 3b                	jmp    114 <.L30+0x5>
+
+000000d9 <.L21>:
+  d9:	c6 45 e3 75          	movb   $0x75,-0x1d(%ebp)
+  dd:	eb 35                	jmp    114 <.L30+0x5>
+
+000000df <.L22>:
+  df:	c6 45 e3 39          	movb   $0x39,-0x1d(%ebp)
+  e3:	eb 2f                	jmp    114 <.L30+0x5>
+
+000000e5 <.L23>:
+  e5:	c6 45 e3 68          	movb   $0x68,-0x1d(%ebp)
+  e9:	eb 29                	jmp    114 <.L30+0x5>
+
+000000eb <.L24>:
+  eb:	c6 45 e3 50          	movb   $0x50,-0x1d(%ebp)
+  ef:	eb 23                	jmp    114 <.L30+0x5>
+
+000000f1 <.L25>:
+  f1:	c6 45 e3 3b          	movb   $0x3b,-0x1d(%ebp)
+  f5:	eb 1d                	jmp    114 <.L30+0x5>
+
+000000f7 <.L26>:
+  f7:	c6 45 e3 70          	movb   $0x70,-0x1d(%ebp)
+  fb:	eb 17                	jmp    114 <.L30+0x5>
+
+000000fd <.L27>:
+  fd:	c6 45 e3 6f          	movb   $0x6f,-0x1d(%ebp)
+ 101:	eb 11                	jmp    114 <.L30+0x5>
+
+00000103 <.L28>:
+ 103:	c6 45 e3 33          	movb   $0x33,-0x1d(%ebp)
+ 107:	eb 0b                	jmp    114 <.L30+0x5>
+
+00000109 <.L29>:
+ 109:	c6 45 e3 50          	movb   $0x50,-0x1d(%ebp)
+ 10d:	eb 05                	jmp    114 <.L30+0x5>
+
+0000010f <.L30>:
+ 10f:	c6 45 e3 37          	movb   $0x37,-0x1d(%ebp)
+ 113:	90                   	nop
+ 114:	0f be 45 e3          	movsbl -0x1d(%ebp),%eax
+ 118:	83 ec 0c             	sub    $0xc,%esp
+ 11b:	50                   	push   %eax
+ 11c:	e8 fc ff ff ff       	call   11d <.L30+0xe>
+ 121:	83 c4 10             	add    $0x10,%esp
+ 124:	83 45 e4 01          	addl   $0x1,-0x1c(%ebp)
+ 128:	8b 45 e4             	mov    -0x1c(%ebp),%eax
+ 12b:	83 f8 09             	cmp    $0x9,%eax
+ 12e:	0f 86 0d ff ff ff    	jbe    41 <do_phase+0x41>
+ 134:	83 ec 0c             	sub    $0xc,%esp
+ 137:	6a 0a                	push   $0xa
+ 139:	e8 fc ff ff ff       	call   13a <.L30+0x2b>
+ 13e:	83 c4 10             	add    $0x10,%esp
+ 141:	90                   	nop
+ 142:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 145:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+ 14c:	74 05                	je     153 <.L30+0x44>
+ 14e:	e8 fc ff ff ff       	call   14f <.L30+0x40>
+ 153:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+ 156:	c9                   	leave  
+ 157:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.bx:
+
+00000000 <__x86.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    
