@@ -120,8 +120,7 @@ test.py
 CommunitySearch.py
 
 Test/
-else/
-cache/
+
 
 *.doc
 *.docx
