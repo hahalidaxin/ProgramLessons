@@ -5,4 +5,4 @@
 
 * DSAA : Data Structure and Algorithm 《数据结构与算法》
 
-* Python-2018SUMMER : Python语言2018年夏
+* Python : 《Python语言2018年夏》
