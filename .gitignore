@@ -130,3 +130,5 @@ cache/
 *.zip
 *.7z
 test.*
+
+getcode.txt
