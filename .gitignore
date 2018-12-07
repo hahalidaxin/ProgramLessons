@@ -129,6 +129,7 @@ cache/
 *.rar
 *.zip
 *.7z
+*.tmp
 test.*
 
 getcode.txt
