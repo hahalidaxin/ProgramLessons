@@ -468,6 +468,7 @@ void sigtstp_handler(int sig) {
     pid_t pid = fgpid(jobs);
     getjobpid(jobs, pid)->state = ST;       //设置state为ST
 //  Job [2] (29481) stopped by signal 20
+    kill(-pid,SIGTSTP);
     printf("Job [%d] (%d) stopped by signal %d\n", pid2jid(pid), pid, sig);
     return;
 }
