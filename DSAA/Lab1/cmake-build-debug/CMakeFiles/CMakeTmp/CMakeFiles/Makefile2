@@ -67,39 +67,39 @@ CMAKE_SOURCE_DIR = E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CM
 CMAKE_BINARY_DIR = E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CMakeFiles\CMakeTmp
 
 #=============================================================================
-# Target rules for target CMakeFiles/cmTC_33bb3.dir
+# Target rules for target CMakeFiles/cmTC_dc27d.dir
 
 # All Build rule for target.
-CMakeFiles/cmTC_33bb3.dir/all:
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/depend
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1,2 "Built target cmTC_33bb3"
-.PHONY : CMakeFiles/cmTC_33bb3.dir/all
+CMakeFiles/cmTC_dc27d.dir/all:
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/depend
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1,2 "Built target cmTC_dc27d"
+.PHONY : CMakeFiles/cmTC_dc27d.dir/all
 
 # Include target in all.
-all: CMakeFiles/cmTC_33bb3.dir/all
+all: CMakeFiles/cmTC_dc27d.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cmTC_33bb3.dir/rule:
+CMakeFiles/cmTC_dc27d.dir/rule:
 	$(CMAKE_COMMAND) -E cmake_progress_start E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/cmTC_33bb3.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/cmTC_dc27d.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles 0
-.PHONY : CMakeFiles/cmTC_33bb3.dir/rule
+.PHONY : CMakeFiles/cmTC_dc27d.dir/rule
 
 # Convenience name for target.
-cmTC_33bb3: CMakeFiles/cmTC_33bb3.dir/rule
+cmTC_dc27d: CMakeFiles/cmTC_dc27d.dir/rule
 
-.PHONY : cmTC_33bb3
-
-# clean rule for target.
-CMakeFiles/cmTC_33bb3.dir/clean:
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/clean
-.PHONY : CMakeFiles/cmTC_33bb3.dir/clean
+.PHONY : cmTC_dc27d
 
 # clean rule for target.
-clean: CMakeFiles/cmTC_33bb3.dir/clean
+CMakeFiles/cmTC_dc27d.dir/clean:
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/clean
+.PHONY : CMakeFiles/cmTC_dc27d.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/cmTC_dc27d.dir/clean
 
 .PHONY : clean
 

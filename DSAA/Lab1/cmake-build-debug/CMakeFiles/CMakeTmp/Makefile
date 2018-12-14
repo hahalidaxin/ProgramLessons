@@ -58,17 +58,6 @@ CMAKE_BINARY_DIR = E:\CodeTraining\ProgramLessons\DSAA\Lab1\cmake-build-debug\CM
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@echo No interactive CMake dialog available...
-	"D:\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@echo Running CMake to regenerate build system...
@@ -79,6 +68,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@echo No interactive CMake dialog available...
+	"D:\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all:
@@ -108,17 +108,17 @@ preinstall/fast:
 .PHONY : preinstall/fast
 
 #=============================================================================
-# Target rules for targets named cmTC_33bb3
+# Target rules for targets named cmTC_dc27d
 
 # Build rule for target.
-cmTC_33bb3:
-	$(MAKE) -f CMakeFiles\Makefile2 cmTC_33bb3
-.PHONY : cmTC_33bb3
+cmTC_dc27d:
+	$(MAKE) -f CMakeFiles\Makefile2 cmTC_dc27d
+.PHONY : cmTC_dc27d
 
 # fast build rule for target.
-cmTC_33bb3/fast:
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/build
-.PHONY : cmTC_33bb3/fast
+cmTC_dc27d/fast:
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/build
+.PHONY : cmTC_dc27d/fast
 
 feature_tests.obj: feature_tests.c.obj
 
@@ -126,7 +126,7 @@ feature_tests.obj: feature_tests.c.obj
 
 # target to build an object file
 feature_tests.c.obj:
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/feature_tests.c.obj
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/feature_tests.c.obj
 .PHONY : feature_tests.c.obj
 
 feature_tests.i: feature_tests.c.i
@@ -135,7 +135,7 @@ feature_tests.i: feature_tests.c.i
 
 # target to preprocess a source file
 feature_tests.c.i:
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/feature_tests.c.i
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/feature_tests.c.i
 .PHONY : feature_tests.c.i
 
 feature_tests.s: feature_tests.c.s
@@ -144,7 +144,7 @@ feature_tests.s: feature_tests.c.s
 
 # target to generate assembly for a file
 feature_tests.c.s:
-	$(MAKE) -f CMakeFiles\cmTC_33bb3.dir\build.make CMakeFiles/cmTC_33bb3.dir/feature_tests.c.s
+	$(MAKE) -f CMakeFiles\cmTC_dc27d.dir\build.make CMakeFiles/cmTC_dc27d.dir/feature_tests.c.s
 .PHONY : feature_tests.c.s
 
 # Help Target
@@ -152,9 +152,9 @@ help:
 	@echo The following are some of the valid targets for this Makefile:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
-	@echo ... edit_cache
-	@echo ... cmTC_33bb3
 	@echo ... rebuild_cache
+	@echo ... cmTC_dc27d
+	@echo ... edit_cache
 	@echo ... feature_tests.obj
 	@echo ... feature_tests.i
 	@echo ... feature_tests.s
