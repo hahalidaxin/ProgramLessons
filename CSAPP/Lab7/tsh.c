@@ -88,50 +88,51 @@ handler_t *Signal(int signum, handler_t *handler);
 /*
  * main - The shell's main routine
  */
+/*
+ * shell的执行main函数
+ */
 int main(int argc, char **argv)
 {
     char c;
     char cmdline[MAXLINE];
     int emit_prompt = 1; /* emit prompt (default) */
 
-    /* Redirect stderr to stdout (so that driver will get all output
-     * on the pipe connected to stdout) */
+    /*将stderr重定位到stdout*/
     dup2(1, 2);
 
-    /* Parse the command line */
+    /* 解析命令行 讨论命令参数*/
     while ((c = getopt(argc, argv, "hvp")) != EOF) {
         switch (c) {
-        case 'h':             /* print help message */
+        case 'h':             /*打印帮助信息*/
             usage();
 	    break;
-        case 'v':             /* emit additional diagnostic info */
+        case 'v':             /* 打印格外调试信息*/
             verbose = 1;
 	    break;
-        case 'p':             /* don't print a prompt */
-            emit_prompt = 0;  /* handy for automatic testing */
+        case 'p':             /* 不打印prompt */
+            emit_prompt = 0;
 	    break;
 	    default:
             usage();
 	    }
     }
 
-    /* Install the signal handlers */
+    /* 注册自己编写的信号处理函数 */
 
-    /* These are the ones you will need to implement */
     Signal(SIGINT,  sigint_handler);   /* ctrl-c */
     Signal(SIGTSTP, sigtstp_handler);  /* ctrl-z */
-    Signal(SIGCHLD, sigchld_handler);  /* Terminated or stopped child */
+    Signal(SIGCHLD, sigchld_handler);  /* 终止 或者 子进程返回 */
 
-    /* This one provides a clean way to kill the shell */
+    /*干净地杀死terminal*/
     Signal(SIGQUIT, sigquit_handler);
 
-    /* Initialize the job list */
+    /*初始化工作列表*/
     initjobs(jobs);
 
-    /* Execute the shell's read/eval loop */
+    /* 执行死循环流程*/
     while (1) {
 
-	/* Read command line */
+	/* 读入命令行 */
 	if (emit_prompt) {
 	    printf("%s", prompt);
 	    fflush(stdout);
@@ -143,7 +144,7 @@ int main(int argc, char **argv)
 	    exit(0);
 	}
 
-	/* Evaluate the command line */
+	/* 处理命令行 */
 	eval(cmdline);
 	fflush(stdout);
 	fflush(stdout);
@@ -163,6 +164,9 @@ int main(int argc, char **argv)
  * background children don't receive SIGINT (SIGTSTP) from the kernel
  * when we type ctrl-c (ctrl-z) at the keyboard.
 */
+/*
+ * eval函数是用来处理命令行输入的主要逻辑，所有的处理执行逻辑在这里实现
+ */
 void eval(char *cmdline)
 {
     /* $begin handout */
@@ -171,7 +175,6 @@ void eval(char *cmdline)
     pid_t pid;           /* process id */
     sigset_t mask;       /* signal mask */
 
-    /* Parse command line */
     /*解析命令行*/
     bg = parseline(cmdline, argv);
     if (argv[0] == NULL)
@@ -179,14 +182,9 @@ void eval(char *cmdline)
 
     if (!builtin_cmd(argv)) {
 
-        /*
-	 * This is a little tricky. Block SIGCHLD, SIGINT, and SIGTSTP
-	 * signals until we can add the job to the job list. This
-	 * eliminates some nasty races between adding a job to the job
-	 * list and the arrival of SIGCHLD, SIGINT, and SIGTSTP signals.
-	 */
     /* 将SIGCHLD SIGINT SIGSTP的信号阻塞 因为在这些处理程序中都是用了job相关的函数
      * 也就是同时调用了全局变量jobs 为了避免竞争所以对这些信号进行阻断
+     * 同时需要注意 需要输出错误信息
      */
 	if (sigemptyset(&mask) < 0)
 	    unix_error("sigemptyset error");
@@ -199,26 +197,22 @@ void eval(char *cmdline)
 	if (sigprocmask(SIG_BLOCK, &mask, NULL) < 0)
 	    unix_error("sigprocmask error");
 
-	/* Create a child process */
+	/* 创建一个子进程 */
 	if ((pid = fork()) < 0)
 	    unix_error("fork error");
 
 	/*
-	 * Child  process
+	 * 子进程中的执行逻辑 用pid=0来区分
 	 */
-
 	if (pid == 0) {
-	    /* Child unblocks signals */
+	    /* 子进程 解锁信号 */
 	    sigprocmask(SIG_UNBLOCK, &mask, NULL);
 
-	    /* Each new job must get a new process group ID
-	       so that the kernel doesn't send ctrl-c and ctrl-z
-	       signals to all of the shell's jobs */
-	    /* 对每一个子进程开一个单独的进程组 */
+	    /* 对每一个子进程开一个单独的进程组 用setpid(0,0)来实现 */
 	    if (setpgid(0, 0) < 0)
-		unix_error("setpgid error");
+		  unix_error("setpgid error");
 
-	    /* Now load and run the program in the new job */
+	    /* 执行新的程序 */
 	    if (execve(argv[0], argv, environ) < 0) {
             printf("%s: Command not found\n", argv[0]);
             exit(0);
@@ -226,11 +220,11 @@ void eval(char *cmdline)
 	}
 
 	/*
-	 * Parent process
+	 * 父进程
 	 */
 
-	/* Parent adds the job, and then unblocks signals so that
-	   the signals handlers can run again */
+	/* 为了解决父进程与子进程之前存在的race问题，上面设置了信号的封锁，
+	 * 这里在添加了job之后需要对上面封锁的信号进行解锁*/
 	addjob(jobs, pid, (bg == 1 ? BG : FG), cmdline);
 	sigprocmask(SIG_UNBLOCK, &mask, NULL);
 
@@ -250,6 +244,7 @@ void eval(char *cmdline)
  * argument.  Return true if the user has requested a BG job, false if
  * the user has requested a FG job.
  */
+/* 解析命令行 */
 int parseline(const char *cmdline, char **argv)
 {
     static char array[MAXLINE]; /* holds local copy of command line */
@@ -464,8 +459,10 @@ void sigint_handler(int sig)
  *     foreground job by sending it a SIGTSTP.
  */
 void sigtstp_handler(int sig) {
+//    puts("handle sigstop");
     /*SIGSTP信号的处理函数*/
     pid_t pid = fgpid(jobs);
+    if(pid == 0) return ;
     getjobpid(jobs, pid)->state = ST;       //设置state为ST
 //  Job [2] (29481) stopped by signal 20
     kill(-pid,SIGTSTP);
@@ -669,6 +666,7 @@ void app_error(char *msg)
 /*
  * Signal - wrapper for the sigaction function
  */
+/* 给出的通过sigaction进行的包装 完成信号注册的功能 */
 handler_t *Signal(int signum, handler_t *handler)
 {
     struct sigaction action, old_action;
