@@ -1,3 +1,0 @@
-E:/CodeTraining/ProgramLessons/DSAA/Lab2/cmake-build-debug/CMakeFiles/labtree.dir
-E:/CodeTraining/ProgramLessons/DSAA/Lab2/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/CodeTraining/ProgramLessons/DSAA/Lab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

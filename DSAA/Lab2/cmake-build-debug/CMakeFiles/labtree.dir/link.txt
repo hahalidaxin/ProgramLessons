@@ -1,3 +1,0 @@
-"D:\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\labtree.dir/objects.a
-D:\MinGW-w64\mingw64\bin\ar.exe cr CMakeFiles\labtree.dir/objects.a @CMakeFiles\labtree.dir\objects1.rsp
-D:\MinGW-w64\mingw64\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\labtree.dir/objects.a -Wl,--no-whole-archive  -o labtree.exe -Wl,--out-implib,liblabtree.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\labtree.dir\linklibs.rsp
