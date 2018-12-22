@@ -123,6 +123,9 @@ CommunitySearch.py
 Test/
 else/
 cache/
+cmake-build-debug/
+
+CMakeLists.txt
 
 *.doc
 *.docx

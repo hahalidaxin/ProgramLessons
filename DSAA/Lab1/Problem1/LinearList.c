@@ -57,7 +57,7 @@ List* Findnth(List* list,int posit)
 List* InsertNode(List* head,int data)
 {
     List*pNow = head;
-    if(data<head->data) {
+    if(data < head->data) {
         List* newNode = (List*)malloc(sizeof(List));
         newNode->data = data;
         newNode->pNext = head;

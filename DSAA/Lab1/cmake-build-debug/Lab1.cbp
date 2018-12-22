@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab1Problem2">
-				<Option output="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Lab1Problem2.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option output="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Lab1Problem2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -29,15 +29,15 @@
 					<Add directory="D:/MinGW-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem2"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem2"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab1Problem2/fast">
-				<Option output="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Lab1Problem2.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option output="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Lab1Problem2.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -47,25 +47,25 @@
 					<Add directory="D:/MinGW-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem2/fast"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem2/fast"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab1Problem1">
-				<Option output="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Lab1Problem1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option output="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Lab1Problem1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,15 +75,15 @@
 					<Add directory="D:/MinGW-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem1"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem1"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Lab1Problem1/fast">
-				<Option output="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Lab1Problem1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option output="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Lab1Problem1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -93,30 +93,30 @@
 					<Add directory="D:/MinGW-w64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem1/fast"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lab1Problem1/fast"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug"/>
+				<Option working_dir="E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/MinGW-w64/mingw64/bin/mingw32-make.exe -f &quot;E:/CodeTraining/ProgramLessons/DSAA/Lab1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/Problem1/LinearList.c">
+		<Unit filename="E:/CodeTraining/ProgramLessons/DSAA/Lab1/Problem1/LinearList.c">
 			<Option target="Lab1Problem2"/>
 		</Unit>
-		<Unit filename="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/Problem2/PolyCompute.c">
+		<Unit filename="E:/CodeTraining/ProgramLessons/DSAA/Lab1/Problem2/PolyCompute.c">
 			<Option target="Lab1Problem1"/>
 		</Unit>
-		<Unit filename="E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/Lab1/CMakeLists.txt">
+		<Unit filename="E:/CodeTraining/ProgramLessons/DSAA/Lab1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

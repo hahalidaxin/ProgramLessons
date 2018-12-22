@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/labtree/main.c" "E:/CodeTraining/ProgramLessons/DataStructureAndAlgorithm/labtree/cmake-build-debug/CMakeFiles/labtree.dir/main.c.obj"
+  "E:/CodeTraining/ProgramLessons/DSAA/Lab2/main.c" "E:/CodeTraining/ProgramLessons/DSAA/Lab2/cmake-build-debug/CMakeFiles/labtree.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
