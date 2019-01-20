@@ -161,6 +161,7 @@ int Half_Search(int key){           //¶ş·Ö²éÕÒ
 //    puts("");
 //    puts("yes");
     while(L<=R) {
+        printf("L:%d R:%d\n",L,R);
         half_cnt++;
         mid=(L+R)/2;
         if(inorder[mid]==key) { return 1; }
