@@ -1,0 +1,1 @@
+fprintf("%d\n",fun(2));

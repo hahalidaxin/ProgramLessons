@@ -124,18 +124,26 @@ Test/
 else/
 cache/
 cmake-build-debug/
+out/
 
 1703008-1170300825-李大鑫*
 
 CMakeLists.txt
 
 *.doc
+*.pdf
 *.docx
 *.exe
 *.rar
 *.zip
 *.7z
 *.tmp
+*.iml
 test.*
+
+*/target/
+*/.gitignore
+*/.git
+*/.metadata
 
 getcode.txt
